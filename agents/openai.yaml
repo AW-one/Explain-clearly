@@ -1,0 +1,5 @@
+interface:
+  display_name: "Explain Clearly"
+  short_description: "用最相关的讲解范例串起概念、机制、因果、技术对比和数学推导"
+policy:
+  allow_implicit_invocation: false
