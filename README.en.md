@@ -12,16 +12,20 @@ Ask an AI a technical question directly and you often get an answer that is corr
 
 Explain Clearly makes the agent explain in a way that:
 
+- **Teaches completely by default**: the first time you ask about a concept or technology, it teaches systematically through five chapters — What, Why, How, When, Compare — instead of handing you a summary. It narrows the scope only when you explicitly ask for something brief or limited.
+- **Offers three depth levels**: Quick (100–500 words, for short answers and follow-ups), Standard (1,500–2,500 words, the default for first-time learning), and Deep (3,000+ words, for complex algorithms, low-level principles, and system architecture). Length follows the difficulty of the question and your request.
 - **Starts from what you know**: it first judges what you already understand, skips the known parts, and fills in only the prerequisites that affect this question. It also distinguishes "can use it" from "understands how it works inside".
-- **Uses one scenario throughout**: the same example, the same piece of code, or the same worked calculation carries all the key steps, instead of a different unrelated example for every concept.
-- **Picks from five dimensions**: What (what it is), Why (why it is needed), How (how it works), When (when it applies), Compare (how it differs from alternatives) — chosen per question, never mechanically filled in.
-- **Stays traceable and checkable**: observable objects and changes come before terminology; confirmed facts, teaching assumptions, and inferences are kept distinct; causal explanations state the conditions under which they hold and observations you can verify.
+- **Uses one scenario throughout**: one main case carries all five chapters. The agent tracks its objects, inputs, and state changes until a result appears, then varies the conditions to show boundaries and comparison conclusions.
+- **Researches before it teaches**: in Standard and Deep, the agent first searches three directions — the latest versions and technical evolution, mainstream alternatives, and improvements and derived techniques — preferring official documentation, official repositories, and original papers, and distinguishing mature technology, experimental approaches, and research results.
+- **Compares in three directions**: horizontally, the responsibilities and trade-offs of comparable alternatives; vertically, how important versions evolved; and derived techniques — what pain point each improvement solves, its core change, and its main limitations.
+- **Visualizes on request**: by default it uses Markdown tables, Mermaid, or monospace text diagrams. Only when you explicitly ask for pictures or diagrams ("explain with images", "draw it") does it switch to the enhanced visual mode, retrieving real photos, official structure diagrams, or figures from papers, and generating images or interactive demos only when necessary.
+- **Stays traceable and checkable**: each term is explained where it first appears, in terms of the case at hand; confirmed facts, teaching assumptions, and inferences are kept distinct; causal explanations state the conditions under which they hold and observations you can verify. Before answering, the agent self-checks coverage, depth, terminology, case continuity, applicability boundaries, and sources.
 - **Handles follow-ups**: when something does not click, it locates the exact sticking point, fills just that gap, and adjusts the depth using the background already established.
 - **Remembers your level**: the skill maintains an internal learning record in your workspace (`.explain-clearly/memory.md`), so later explanations continue from your current familiarity.
 
 ## Before / after
 
-Take the question: "We use a database connection pool, so why do requests still wait?" The two answers below illustrate the difference in style.
+Take the question: "We use a database connection pool, so why do requests still wait?" The two answers below illustrate the difference in style. The excerpt only demonstrates the "one scenario throughout" approach; a default complete-teaching answer is much longer and unfolds systematically through the five chapters.
 
 **A short answer**
 
@@ -72,6 +76,8 @@ $explain-clearly Explain how Go's context.Context works, using a request-cancell
 ```
 
 For follow-up questions you do not need to name it again; the skill continues in the same style.
+
+You can also steer the depth and form in plain words: "keep it brief" selects Quick, "go deep" selects Deep, and asking to "explain with images" or "draw it" enables the enhanced visual mode for that answer.
 
 ## Repository layout
 
