@@ -1,5 +1,7 @@
 # Explain Clearly
 
+**中文** | [English](README.en.md)
+
 > An Agent Skill that helps AI agents explain technical knowledge clearly: concepts, mechanisms, failure causes, and design trade-offs.
 >
 > 一个让 AI Agent 把技术知识讲清楚的技能：讲解概念、机制、故障原因和方案差异。
