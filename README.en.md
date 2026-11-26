@@ -63,6 +63,14 @@ git clone https://github.com/AW-one/Explain-clearly.git "$env:USERPROFILE/.claud
 
 For Codex, replace the path with `$env:USERPROFILE/.codex/skills/explain-clearly`; everything else is the same.
 
+### Or: let your AI install it in one sentence
+
+If you would rather not run commands yourself, send this sentence to your agent — it will find its own skills directory and clone the repo for you:
+
+```text
+Please install the Explain Clearly skill for me: clone https://github.com/AW-one/Explain-clearly into your skills directory, keeping the folder name explain-clearly; if the skills directory does not exist yet, create it first. When you are done, tell me how to invoke this skill.
+```
+
 ## Usage
 
 This skill is invoked explicitly: name it before your question.
