@@ -65,6 +65,14 @@ git clone https://github.com/AW-one/Explain-clearly.git "$env:USERPROFILE/.claud
 
 Codex 用户把路径换成 `$env:USERPROFILE/.codex/skills/explain-clearly` 即可，其余相同。
 
+### 或者：让 AI 一句话装好
+
+不想自己敲命令的，把下面这句话直接发给你的 Agent，它会自己找到技能目录并克隆好：
+
+```text
+请帮我安装 Explain Clearly 这个 skill：把 https://github.com/AW-one/Explain-clearly 克隆到你的技能目录下，目录名保持 explain-clearly；如果技能目录还不存在，就先创建它。装好后告诉我怎么调用这个 skill。
+```
+
 ## 使用
 
 这个技能是显式调用的，在问题前点名它：
